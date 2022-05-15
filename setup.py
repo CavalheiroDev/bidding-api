@@ -13,6 +13,7 @@ setup(name='bidding',
           'django-cors-headers==3.11.0',
           'django-environ==0.8.1',
           'drf-yasg>=1.20.0',
+          'djangorestframework-simplejwt==5.1.0',
       ],
       extras_require={
           'dev': [
