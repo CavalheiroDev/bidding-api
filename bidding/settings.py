@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from environ import Env
-
+from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+BASE_DIR = BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Read environments file
@@ -71,6 +71,9 @@ INSTALLED_APPS = [
 
      # cors
     'corsheaders',
+
+    #apps
+    'bidding.authentication',
 ]
 
 MIDDLEWARE = [

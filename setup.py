@@ -13,6 +13,7 @@ setup(name='bidding',
           'django-cors-headers==3.11.0',
           'django-environ==0.8.1',
           'drf-yasg>=1.20.0',
+          'djangorestframework-simplejwt==5.1.0',
       ],
       extras_require={
           'dev': [
@@ -21,6 +22,8 @@ setup(name='bidding',
               'pytest>=7.1.2',
               'pytest-cov>=3.0.0',
               'pytest-django==4.5.2',
+              'faker==13.11.1',
+              'factory-boy==3.2.1'
           ],
       }
       )
