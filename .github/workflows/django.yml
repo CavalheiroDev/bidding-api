@@ -24,6 +24,9 @@ jobs:
     - name: Setup and install dependencies
       run: |
         make setup-dev
+    - name: Code Convention
+      run: |
+      make code-convention
     - name: Run Tests
       run: |
         make test
