@@ -22,6 +22,8 @@ setup(name='bidding',
               'pytest>=7.1.2',
               'pytest-cov>=3.0.0',
               'pytest-django==4.5.2',
+              'faker==13.11.1',
+              'factory-boy==3.2.1'
           ],
       }
       )
