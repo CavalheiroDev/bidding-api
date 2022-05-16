@@ -63,7 +63,7 @@ code-convention: pycodestyle flake8
 
 test:
 	# "Running unit tests"
-	pytest -v --cov-report=term-missing --cov-report=html --cov-report=xml --cov=bidding_api --cov-fail-under=80
+	pytest -v --cov-report=term-missing --cov-report=html --cov-report=xml --cov=bidding_api --cov-fail-under=0
 
 test-lf:
 	# "Running unit tests"
