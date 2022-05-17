@@ -26,7 +26,7 @@ jobs:
         make setup-dev
     - name: Code Convention
       run: |
-      make code-convention
+        make code-convention
     - name: Run Tests
       run: |
         make test
