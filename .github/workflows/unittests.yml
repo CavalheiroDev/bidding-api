@@ -2,25 +2,22 @@ name: bidding CI
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-20.04
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.9.7]
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python 3.9.7
       uses: actions/setup-python@v3
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.9.7
     - name: Setup and install dependencies
       run: |
         make setup-dev
