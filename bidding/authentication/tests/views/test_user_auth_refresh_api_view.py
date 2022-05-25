@@ -3,8 +3,9 @@ from faker import Faker
 
 from django.urls import reverse
 from rest_framework.test import APIClient
-from django.contrib.auth.models import User
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+
+from bidding.user.models import User
 
 
 class TestUserAuthAPIView:
