@@ -5,7 +5,6 @@ from django.urls import reverse
 from rest_framework.test import APIClient
 
 from factories import UserFactory
-from bidding.user.models import User
 
 
 class TestUserCreateApiView:

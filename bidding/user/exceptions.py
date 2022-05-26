@@ -7,9 +7,9 @@ class UserNotFound(ObjectNotFound):
     DEFAULT_STATUS_CODE = 404
 
     def __init__(self,
-               message: str = DEFAULT_MESSAGE,
-               code: str = DEFAULT_CODE,
-               status_code: int = DEFAULT_STATUS_CODE):
+                 message: str = DEFAULT_MESSAGE,
+                 code: str = DEFAULT_CODE,
+                 status_code: int = DEFAULT_STATUS_CODE):
         super().__init__(message=message, code=code, status_code=status_code)
 
 
@@ -19,7 +19,7 @@ class UserAlreadyExists(BiddingValidationError):
     DEFAULT_STATUS_CODE = 400
 
     def __init__(self,
-               message: str = DEFAULT_MESSAGE,
-               code: str = DEFAULT_CODE,
-               status_code: int = DEFAULT_STATUS_CODE):
+                 message: str = DEFAULT_MESSAGE,
+                 code: str = DEFAULT_CODE,
+                 status_code: int = DEFAULT_STATUS_CODE):
         super().__init__(message=message, code=code, status_code=status_code)
