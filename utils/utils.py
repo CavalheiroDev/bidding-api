@@ -30,10 +30,10 @@ class ErrorsFormatter:
     CODE = 'code'
     ERRORS = 'errors'
 
-    def _init_(self, exception):
+    def __init__(self, exception):
         self.exception = exception
 
-    def _call_(self):
+    def __call__(self):
         if hasattr(self.exception, 'get_full_details'):
             formatted_errors = self._get_response_json_from_drf_errors(
                 serializer_errors=self.exception.get_full_details()
