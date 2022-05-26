@@ -3,14 +3,31 @@ import pytest
 
 @pytest.fixture
 def authentication_user_invalid_credentials():
-    return {'detail': 'No active account found with the given credentials'}
+    return {
+        "errors": [
+            {
+                "message": "No active account found with the given credentials",
+                "code": "no_active_account"
+            }
+        ]
+    }
 
 
 @pytest.fixture
 def authentication_refresh_user_invalid_credentials():
     return {
-        "detail": "Token is invalid or expired",
-        "code": "token_not_valid"
+        "errors": [
+            {
+                "message": "Token is invalid or expired",
+                "code": "token_not_valid",
+                "field": "detail"
+            },
+            {
+                "message": "token_not_valid",
+                "code": "token_not_valid",
+                "field": "code"
+            }
+        ]
     }
 
 
